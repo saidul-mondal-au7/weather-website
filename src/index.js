@@ -98,5 +98,6 @@ app.listen(port,()=>{
 });
 //nodemon src/index.js -e js,hbs
 //npm run start
+//npm run dev
 //https://said-weather-application.herokuapp.com/
 //https://git.heroku.com/said-weather-application.git

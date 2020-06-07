@@ -13,11 +13,16 @@ const weather = (latitude,longitude,callback)=>{
             callback('Unable to find location.',undefined)
         }
         else{
+            // console.log(response.body.current)
             const temp = response.body.current.temperature
             const feel = response.body.current.feelslike
             const cloudy = response.body.current.weather_descriptions
+            const wind_speed = response.body.current.wind_speed
+            const humidity = response.body.current.humidity
+            const cloudcover = response.body.current.cloudcover
+
             callback(undefined,'It is '+cloudy
-            +' and currently '+ temp +' degrees out. It feels like '+feel+' degrees out')
+            +' and currently '+ temp +' degrees out. It feels like '+feel+' degrees out.The wind speed is '+wind_speed+'. The humidity is '+humidity+'% and cloudcover '+cloudcover +'% .')
         }
     })
 }
