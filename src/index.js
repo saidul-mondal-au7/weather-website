@@ -5,6 +5,8 @@ const path = require('path');
 const hbs = require('hbs');
 const app = express();
 
+const port = process.env.PORT || 3000
+
 const filePath = path.join(__dirname,"../public");
 const hbsPath=path.join(__dirname,"../templates/views");
 const partialsPath=path.join(__dirname,"../templates/partials");
@@ -91,7 +93,10 @@ app.get('/help/*',(req,res)=>{
     })
 })
 
-app.listen(8070,()=>{
-    console.log('My server is running!')
+app.listen(port,()=>{
+    console.log('My server is running! '+port)
 });
 //nodemon src/index.js -e js,hbs
+//npm run start
+//https://said-weather-application.herokuapp.com/
+//https://git.heroku.com/said-weather-application.git
